@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+h1 {
+  color: #274ebb;
+  margin: 20px;
+}
+
+.header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  padding: 0;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  background-color: #274ebb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 15rem;
+}
+
+.card-container {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.card {
+  color: #5f5f5f;
+  width: 200px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: #9b9b9b59 0px 5px 3px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.card button {
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+  background-color: #274ebb;
+}
+
+#search-bar {
+  width: 640px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+}
