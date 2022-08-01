@@ -19,6 +19,10 @@ app.get('/', Movie.getMovie);
 app.get('/addmovie', (req, res) => {
   res.render('addMovie');
 });
+app.get('/result', (req, res) => {
+  res.render('result');
+});
+app.post('/result', Movie.searchMovie);
 app.post('/addmovie', Movie.postMovie);
 
 //Connect to db and listen to port

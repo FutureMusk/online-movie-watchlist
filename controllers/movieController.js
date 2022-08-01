@@ -23,3 +23,12 @@ exports.postMovie = async (req, res) => {
     console.log(err);
   }
 }
+
+exports.searchMovie = async (req, res) => {
+  try {
+    const result = await MovieModel.find({ $text: { $search: req.body.search } });
+    res.render('result', { result, title: "Results"});
+  } catch (err) {
+    console.log(err);
+  }
+}

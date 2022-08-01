@@ -1,7 +1,11 @@
 <div class="header">
   <div class="logo">Logo</div>
   <div class="search">
-    <input type="text" name="search" id="search-bar">
+    <form action="/result" method="POST">
+      <input type="text" name="search" id="search-bar">
+      <input type="submit" onclick="searchFunctionality()">
+    </form>
   </div>
   <div class="account">Login</div>
 </div>
+<script src="/search.js"></script>
