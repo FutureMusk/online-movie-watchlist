@@ -16,12 +16,12 @@ app.set('view engine', 'ejs');
 //   res.render('index', { title: "Homepage" });
 // });
 app.get('/', Movie.getMovie);
-app.get('/addmovie', (req, res) => {
-  res.render('addMovie');
-});
-app.get('/result', (req, res) => {
-  res.render('result');
-});
+app.get('/addmovie', (req, res) => res.render('addMovie'));
+app.get('/result', (req, res) => res.render('result'));
+app.get('/login', (req, res) => res.render('login'));
+app.get('/signup', (req, res) => res.render('signup'));
+
+
 app.post('/result', Movie.searchMovie);
 app.post('/addmovie', Movie.postMovie);
 

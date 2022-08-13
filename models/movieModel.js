@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const movieSchema = new mongoose.Schema({
   movieName: String,

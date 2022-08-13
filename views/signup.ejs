@@ -5,22 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/global.css">
-  <title>Login</title>
+  <title>Signup</title>
 </head>
 <body>
   <%- include("./partials/header.ejs") %>
   <div class="container">
-    <h1>Login</h1>
-    <form action="/login" method="POST">
+    <h1>Signup</h1>
+    <form action="/signup" method="POST">
+      <br>
+      <label for="first_name">First Name</label>
+      <input type="text" name="first_name">
+      <label for="last_name">Last Name</label>
+      <input type="text" name="last_name">
+      <label for="username">Username</label>
+      <input type="text" name="username">
       <label for="email">Email</label>
       <input type="email" name="email" required>
       <label for="password">Password</label>
       <input type="password" name="password" required>
-      <input type="submit" value="Login">
+      <br>
+      <input type="submit">
     </form>
-   
     <a href="/">Homepage</a>
-    <a href="signup">Signup</a>
+    <a href="login">Login</a>
   </div>
 </body>
 </html>
