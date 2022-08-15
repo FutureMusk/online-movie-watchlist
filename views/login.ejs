@@ -11,16 +11,21 @@
   <%- include("./partials/header.ejs") %>
   <div class="container">
     <h1>Login</h1>
-    <form action="/login" method="POST">
-      <label for="email">Email</label>
-      <input type="email" name="email" required>
-      <label for="password">Password</label>
-      <input type="password" name="password" required>
-      <input type="submit" value="Login">
+    <form class="login-form" action="/login" method="POST">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
     </form>
-   
-    <a href="/">Homepage</a>
-    <a href="signup">Signup</a>
+    <div class="extra">
+      <a href="/">Homepage</a>
+      <a href="signup">Signup</a>
+    </div>
   </div>
 </body>
 </html>

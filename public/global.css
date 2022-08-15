@@ -83,3 +83,54 @@ h1 {
   border-radius: 15px;
   border: none;
 }
+
+form {
+  margin: 0;
+  background-color: #274ebb;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.login-form, .signup-form {
+  padding: 30px;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.login-form input, .signup-form input{
+  margin: 0;
+  margin-left: 10px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #6c85c9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+}
+
+.extra {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #274ebb;
+}
+
+.account a {
+  color: white; 
+}

@@ -17,6 +17,7 @@
     "mongoose": "^6.4.4"
   },
   "devDependencies": {
+    "bcrypt": "^5.0.1",
     "nodemon": "^2.0.19"
   }
 }
