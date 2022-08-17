@@ -6,7 +6,8 @@ login = async (email, password) => {
   if (query.length === 0) {
     return { OK: false, msg: "email or password is incorrect" };
   } else {
-    if (await bcrypt.compare(password, query[0].password)) { //query[0].password === password
+    if (await bcrypt.compare(password, query[0].password)) {
+       //query[0].password === password
       return { OK: true, msg: "Login successful", user: query[0] };
     } else {
       return { OK: false, msg: "email or password is incorrect" };
@@ -18,13 +19,13 @@ exports.loginGet = (req, res) => {
   res.render("login", { title: "Login" });
 }
 
-exports.loginPost = (req, res) => {
+exports.loginPost = async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const attempt = await login(email, password);
   if(attempt.OK){
     req.session.user = { key: attempt.user.email, role: attempt.user.isAdmin ? "Admin" : "General" };
-    res.redirect('/dashboard');
+    res.redirect('/');
   } else {
     res.render('login', { title: 'Login', msg: 'Incorrect email or password' });
   }

@@ -1,7 +1,6 @@
 require("dotenv").config();
-
 const express = require("express");
-
+const session = require('express-session');
 const dbConnect = require("./utils/dbConnect.js");
 const Movie = require("./controllers/movieController.js");
 const User = require("./controllers/userController.js");
@@ -12,17 +11,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(session({
+  resave: false, // don't save session if unmodified
+  saveUninitialized: false, // don't create session until something stored
+  secret: 'Hentai For life'
+}));
 
 // app.get('/', (req, res) => {
 //   res.render('index', { title: "Homepage" });
 // });
-app.get("/", Movie.getMovie);
 app.get("/login", (req, res) => res.render('login'));
+app.get("/", Movie.getMovie);
 app.get("/signup", User.signupGet);
 app.get("/addmovie", (req, res) => res.render('addMovie'));
 app.get("/result", (req, res) => res.render('result'));
-
 app.post("/signup", User.signupPost)
+app.post("/login", User.loginPost)
 app.post("/result", Movie.searchMovie);
 app.post("/addmovie", Movie.postMovie);
 
