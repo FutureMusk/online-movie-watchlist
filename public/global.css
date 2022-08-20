@@ -95,13 +95,13 @@ form {
   border-radius: 20px;
 }
 
-.login-form, .signup-form {
+.login-form, .signup-form, .payment-form{
   padding: 30px;
   gap: 20px;
   align-items: flex-end;
 }
 
-.login-form input, .signup-form input{
+.login-form input, .signup-form input, .payment-form input{
   margin: 0;
   margin-left: 10px;
   height: 30px;
@@ -114,7 +114,7 @@ button {
   color: white;
   border: none;
   border-radius: 10px;
-  width: 80px;
+  width: 100px;
   height: 30px;
 }
 
@@ -133,4 +133,23 @@ a {
 
 .account a {
   color: white; 
+}
+
+
+
+{}
+
+.account-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.premium-buttons {
+  background-color: #8faaf3;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
 }

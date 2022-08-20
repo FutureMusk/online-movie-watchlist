@@ -10,13 +10,13 @@
 <body>
   <%- include("./partials/header.ejs") %>
   <div class="container">
-    <form action="/addmovie" method="POST">
+    <form action="/addmovie" method="POST" enctype="multipart/form-data">
       <label for="movieName">Movie</label>
       <input type="text" name="movieName">
       <label for="year">Year</label>
       <input type="text" name="year">
       <label for="image">Image</label>
-      <input type="text" name="image">
+      <input type="file" name="image">
       <input type="submit" value="Add Movie">
     </form>
   </div>
