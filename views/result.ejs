@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/global.css">
-  <title>Result</title>
-</head>
-<body>
-  <%- include("./partials/header.ejs") %>
-  <div class="container">
-    <h1>Keyword Match</h1>
-    <div class="card-container">
-      <% if (result.length > 0) { %>
-        <% for( let i = 0; i < result.length; i++ ) { %>
-          <div class="card">
-            <p><%= result[i].movieName %></p>
-            <p><%= result[i].year %></p>
-            <button>+</button>
-          </div>
-        <% } %>
-      <% } else { %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/global.css" />
+    <title>Result</title>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <div class="container">
+      <h1>Keyword Match</h1>
+      <div class="card-container">
+        <% if (result.length > 0) { %> <% for( let i = 0; i < result.length; i++
+        ) { %>
+        <div class="card">
+          <img src="<%= result[i].image %>" />
+          <p><%= result[i].movieName %></p>
+          <p><%= result[i].year %></p>
+          <button>+</button>
+        </div>
+        <% } %> <% } else { %>
         <p>No results found</p>
-      <% } %>
+        <% } %>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

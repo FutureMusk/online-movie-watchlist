@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 h1 {
@@ -51,15 +50,22 @@ h1 {
 .card {
   color: #5f5f5f;
   width: 200px;
-  height: 300px;
+  height: 410px;
   border: none;
   border-radius: 10px;
   box-shadow: #9b9b9b59 0px 5px 3px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-start;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 110px;
 }
 
 .card button {
@@ -78,7 +84,7 @@ h1 {
 }
 
 #search-bar {
-  width: 640px;
+  /* width: 100%; */
   height: 30px;
   border-radius: 15px;
   border: none;
@@ -95,13 +101,17 @@ form {
   border-radius: 20px;
 }
 
-.login-form, .signup-form, .payment-form{
+.login-form,
+.signup-form,
+.payment-form {
   padding: 30px;
   gap: 20px;
   align-items: flex-end;
 }
 
-.login-form input, .signup-form input, .payment-form input{
+.login-form input,
+.signup-form input,
+.payment-form input {
   margin: 0;
   margin-left: 10px;
   height: 30px;
@@ -115,7 +125,7 @@ button {
   border: none;
   border-radius: 10px;
   width: 100px;
-  height: 30px;
+  padding: 10px;
 }
 
 .extra {
@@ -131,25 +141,41 @@ a {
   color: #274ebb;
 }
 
-.account a {
-  color: white; 
+.topbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-{}
+.topbar a {
+  color: white;
+}
 
 .account-container {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.list-movie {
+  background-color: #8faaf3;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .premium-buttons {
   background-color: #8faaf3;
   border-radius: 20px;
   padding: 20px;
+  margin: 0px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
 
+img {
+  width: 100%;
+  border-radius: 10px;
 }

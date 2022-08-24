@@ -1,13 +1,18 @@
 <div class="header">
-  <div class="logo">Logo</div>
+  <div class="topbar">
+    <a href="/">Home</a>
+    <a href="/addmovie">Add Movie</a>
+  </div>
   <div class="search">
     <form action="/result" method="POST">
-      <input type="text" name="search" id="search-bar">
-      <input type="submit" onclick="searchFunctionality()">
+      <input type="text" name="search" id="search-bar" />
+      <input type="submit" />
     </form>
   </div>
-  <div class="account">
+  <div class="topbar">
     <a href="/login">Login</a>
+    <a href="/logout">Logout</a>
+    <a href="/account">Account</a>
   </div>
 </div>
 <script src="/search.js"></script>

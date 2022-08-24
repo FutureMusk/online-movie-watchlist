@@ -24,7 +24,9 @@ exports.loginPost = async (req, res) => {
   const password = req.body.password;
   const attempt = await login(email, password);
   if(attempt.OK){
+    console.log(req.session);
     req.session.user = { key: attempt.user.email, role: attempt.user.isAdmin ? "Admin" : "General" };
+    console.log(req.session);
     res.redirect('/');
   } else {
     res.render('login', { title: 'Login', msg: 'Incorrect email or password' });

@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/global.css">
-  <title>Homepage</title>
-</head>
-<body>
-  <%- include("./partials/header.ejs") %>
-  <div class="container">
-    <h1>List of movies</h1>
-    <div class="card-container">
-      <% for( let i = 0; i < movieData.length; i++ ) { %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/global.css" />
+    <script src="localSaver.js"></script>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <div class="container">
+      <h1>List of movies</h1>
+      <div class="card-container">
+        <% for( let i = 0; i < movieData.length; i++ ) { %>
         <div class="card">
-          <p><%= movieData[i].movieName %></p>
-          <p><%= movieData[i].year %></p>
-          <button>+</button>
+          <img src="<%= movieData[i].image %>" alt="image" />
+          <div class="details">
+            <div>
+              <p id="movie-name"><%= movieData[i].movieName %></p>
+              <p><%= movieData[i].year %></p>
+            </div>
+            <button
+              id="addMovieToList"
+              onclick="lsvr('<%= movieData[i]._id %>', '<%= movieData[i].movieName %>')"
+            >
+              +
+            </button>
+          </div>
         </div>
-      <% } %>
+        <% } %>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
